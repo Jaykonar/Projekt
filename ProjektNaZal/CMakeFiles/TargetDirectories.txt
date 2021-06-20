@@ -1,0 +1,3 @@
+C:/Qt/Projekty/ProjektNaZal/CMakeFiles/ProjektNaZal.dir
+C:/Qt/Projekty/ProjektNaZal/CMakeFiles/edit_cache.dir
+C:/Qt/Projekty/ProjektNaZal/CMakeFiles/rebuild_cache.dir
