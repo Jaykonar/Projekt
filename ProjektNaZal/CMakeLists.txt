@@ -11,5 +11,5 @@ set_target_properties(ProjektNaZal PROPERTIES
     CXX_EXTENSIONS OFF
 )
 
-find_package(SFML COMPONENTS system window graphics CONFIG REQUIRED)
-target_link_libraries(ProjektNaZal PRIVATE sfml-system sfml-network sfml-graphics sfml-window)
+find_package(SFML COMPONENTS audio system window graphics CONFIG REQUIRED)
+target_link_libraries(ProjektNaZal PRIVATE sfml-audio sfml-system sfml-network sfml-graphics sfml-window)

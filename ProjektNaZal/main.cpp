@@ -1,5 +1,6 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -178,6 +179,14 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(1600, 750), "My window");
 
     // create some shapes
+
+    sf::Music music;
+    if (!music.openFromFile("music.ogg"))
+        return -1; // error
+    music.setLoop(true);
+    music.setVolume(50.f);
+    music.play();
+
 
 //###################################################################################################################################################
 
@@ -729,7 +738,7 @@ int main() {
     int czasomierz=0;
     int SpawnTimer=0;
     int Rate=8500;
-    int gold=50;
+    int gold=15;
     float uszkodzenia=0;
     float uszkodzeniaB=0;
     int DmgCost=100;
@@ -1408,7 +1417,7 @@ int main() {
             SpawnTimer=SpawnTimer+elapsed.asMilliseconds();
             if (SpawnTimer>Rate)
             {
-                int Przeciwnik=rand()% 5+1;
+                int Przeciwnik=rand()% 7+1;
                 if (Przeciwnik==1)
                 {
                     ArmiaB.emplace_back(Jednostka1B());
